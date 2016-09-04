@@ -22,45 +22,61 @@ Bullet::Bullet() {
 }
 
 void Bullet::move() {
-    int st = 1 ;
 
-        //move de bullet up
-        if (st == 1){
-            setPos(x(),y()-10);
+ QList<QGraphicsItem*> colliding_items = collidingItems();
 
-            if (pos().y() + rect() .height() < 0) {
-                scene()->removeItem(this);
-                delete this;
-            }
-             st = st + 1 ;
-            //if bullet collides with enemy destroy both
-            QList<QGraphicsItem*> colliding_items = collidingItems();
+ for (int i=0 , n = colliding_items.size(); i < n ; ++i ){
 
-            for (int i=0 , n = colliding_items.size(); i < n ; ++i ){
+                  if (typeid (*(colliding_items[i])) == typeid (Blocks)) {
+                     //remove then both
+                     scene()->removeItem(colliding_items[i]);
+                     scene()->removeItem(this);
+                     //delete the both
+                     delete colliding_items[i];
+                     delete this;
+                     return;
+                 }
+                 if (typeid (*(colliding_items[i])) == typeid (Wall_left)){
+                     setPos(x()+100,y()+100);
+                 return;
+                 }
+                 if (typeid (*(colliding_items[i])) == typeid (Wall_botton)){
+                     scene()->removeItem(this);
+                     delete this;
+                 return;
+                 }
+             }
 
-                if (pos().y() + rect() .height() < 0) {
-                    scene()->removeItem(this);
-                    delete this;
-                }
+  //  movimiento_inicial();
+  // movimiento_pared_izquierda();
+  //  movimiento_techo();
+   // movimiento_pared_derecha();
+    movimiento_paleta();
 
+}
 
-                if (typeid (*(colliding_items[i])) == typeid (Blocks) || typeid (*(colliding_items[i])) == typeid (Wall_top)) {
-                    //remove then both
-                    scene()->removeItem(colliding_items[i]);
-                    //scene()->removeItem(this);
-                    //delete the both
-                    delete colliding_items[i];
-                    //delete this;
-                    return;
-                }
-                if (typeid (*(colliding_items[i])) == typeid (Wall_left)){
-                    setPos(x()+100,y()+100);
-                return;
-                }
-            }
-        }
+void Bullet::movimiento_inicial()
+{
+    setPos(x()-10,y()-10);
 
+}
 
+void Bullet::movimiento_pared_izquierda()
+{
+    setPos(x()+10,y()-10);
+}
 
+void Bullet::movimiento_pared_derecha()
+{
+    setPos(x()-10,y()+10);
+}
 
+void Bullet::movimiento_techo()
+{
+    setPos(x()+10,y()+10);
+}
+
+void Bullet::movimiento_paleta()
+{
+    setPos(x(),y()-10);
 }
