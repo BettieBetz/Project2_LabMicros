@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
   //  view->setVerticalScrollBar(Qt::ScrollBarAlwaysOff);
   //  Show the view
        view->show();
-       view->setFixedSize(950,900);
-       scene->setSceneRect(0,0,800,800);
+       view->setFixedSize(550,600);
+       scene->setSceneRect(0,0,550,600);
   // w.show();
 
 //#########################################################
@@ -41,15 +41,15 @@ int main(int argc, char *argv[])
 //##################################################
 //Create the Score
       Score * score = new Score();
-      score-> setPos(600,20);
+      score-> setPos(400,500);
       scene->addItem(score);
 
 
 //##################################################
     //Create the Pallete and put into scene also other attribute of object movil
      Palette * plt = new Palette ();
-     plt -> setRect(15,600,100,20);
-     plt -> setPos(+340,0);
+     plt -> setRect(15,525,100,10);
+     plt -> setPos(+190,0);
      scene->addItem(plt);
      //make rect focusable
      plt->setFlag(QGraphicsItem::ItemIsFocusable);
@@ -58,8 +58,8 @@ int main(int argc, char *argv[])
 //######################################################
      //Create the Ball and put into scene
      Ball * bl = new Ball ();
-     bl->setRect(15,550,10,10);
-     bl -> setPos(+380,0);
+     bl->setRect(15,480 ,10,10);
+     bl -> setPos(+230,0);
      scene->addItem(bl);
      //make rect focusable
     //bl->setFlag(QGraphicsItem::ItemIsFocusable);
@@ -68,25 +68,25 @@ int main(int argc, char *argv[])
 //######################################################
     //Create the wall left and put into scene
     Wall_left * wlf = new Wall_left ();
-    wlf->setRect(0,0,15,700);
+    wlf->setRect(0,0,15,600);
     scene->addItem(wlf);
 
 //######################################################
     //Create the wall right and put into scene
     Wall_right * wr = new Wall_right ();
-    wr->setRect(815,0,15,700);
+    wr->setRect(505,0,15,600);
     scene->addItem(wr);
 
 //######################################################
     //Create the wall top and put into scene
     Wall_top * wt = new Wall_top ();
-    wt->setRect(15,0,800,15);
+    wt->setRect(15,0,490,15);
     scene->addItem(wt);
 
 //######################################################
-    //Create the wall top and put into scene
+    //Create the wall botton and put into scene
     Wall_botton * wb = new Wall_botton ();
-    wb->setRect(15,685,800,15);
+    wb->setRect(15,585,490,15);
     scene->addItem(wb);
 
 //######################################################
@@ -94,107 +94,107 @@ int main(int argc, char *argv[])
     for (int i=0; i<22 ; ++i ) {
              if (i == 0){
                 Blocks * blk_i = new Blocks ();
-                blk_i ->setRect (100,100,50,50);
+                blk_i ->setRect (25,30,50,25);
                 scene->addItem(blk_i);
             }
             else if (i == 1 ){
                 Blocks * blk_i = new Blocks ();
-                blk_i ->setRect (200,100,50,50);
+                blk_i ->setRect (95,30,50,25);
                 scene->addItem(blk_i);
             }
             else if (i == 2 ){
                 Blocks * blk_i = new Blocks ();
-                blk_i ->setRect (300,100,50,50);
+                blk_i ->setRect (165,30,50,25);
                 scene->addItem(blk_i);
             }
             else if (i == 3 ){
                 Blocks * blk_i = new Blocks ();
-                blk_i ->setRect (400,100,50,50);
+                blk_i ->setRect (235,30,50,25);
                 scene->addItem(blk_i);
             }
              else if (i == 4 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (500,100,50,50);
+                 blk_i ->setRect (305,30,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 5 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (600,100,50,50);
+                 blk_i ->setRect (375,30,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 7 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (700,100,50,50);
+                 blk_i ->setRect (445,30,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 8 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (100,200,50,50);
+                 blk_i ->setRect (25,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 9 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (200,200,50,50);
+                 blk_i ->setRect (95,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 10 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (300,200,50,50);
+                 blk_i ->setRect (165,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 11 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (400,200,50,50);
+                 blk_i ->setRect (235,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 12 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (500,200,50,50);
+                 blk_i ->setRect (305,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 13 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (600,200,50,50);
+                 blk_i ->setRect (375,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 14 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (700,200,50,50);
+                 blk_i ->setRect (445,80,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 15 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (100,300,50,50);
+                 blk_i ->setRect (25,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 16 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (200,300,50,50);
+                 blk_i ->setRect (95,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 17 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (300,300,50,50);
+                 blk_i ->setRect (165,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 18 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (400,300,50,50);
+                 blk_i ->setRect (235,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 19 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (500,300,50,50);
+                 blk_i ->setRect (305,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 20 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (600,300,50,50);
+                 blk_i ->setRect (375,130,50,25);
                  scene->addItem(blk_i);
              }
              else if (i == 21 ){
                  Blocks * blk_i = new Blocks ();
-                 blk_i ->setRect (700,300,50,50);
+                 blk_i ->setRect (445,130,50,25);
                  scene->addItem(blk_i);
              }
         }
