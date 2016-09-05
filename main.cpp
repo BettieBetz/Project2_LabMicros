@@ -6,11 +6,13 @@
 #include "blocks.h"
 #include "palette.h"
 #include "ball.h"
+#include "score.h"
 #include <QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QGraphicsView>
 #include <QTimer>
+#include <QWidget>
 
 int main(int argc, char *argv[])
 {
@@ -35,6 +37,13 @@ int main(int argc, char *argv[])
 
 //#########################################################
 //########### DEFINIENDO LOS OBJETOS EN LA ESCENA #########
+
+//##################################################
+//Create the Score
+      Score * score = new Score();
+      score-> setPos(600,20);
+      scene->addItem(score);
+
 
 //##################################################
     //Create the Pallete and put into scene also other attribute of object movil

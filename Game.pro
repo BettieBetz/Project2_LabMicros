@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     blocks.cpp \
     palette.cpp \
     ball.cpp \
-    bullet.cpp
+    bullet.cpp \
+    score.cpp
 
 HEADERS  += mainwindow.h \
     wall_left.h \
@@ -31,6 +32,9 @@ HEADERS  += mainwindow.h \
     blocks.h \
     palette.h \
     ball.h \
-    bullet.h
+    bullet.h \
+    score.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES +=
