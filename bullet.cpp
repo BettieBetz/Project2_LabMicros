@@ -6,13 +6,14 @@
 #include "Wall_top.h"
 #include "wall_left.h"
 #include "score.h"
+#include "mainwindow.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QList>
 #include <typeinfo>
+#include "game.h"
 
-extern Score *score ;
-
+extern Game * game ;
 Bullet::Bullet() {
      //Drew the rect
     setRect(0,0,5,5);
@@ -25,18 +26,18 @@ Bullet::Bullet() {
 
 void Bullet::move() {
 
+     movimiento_paleta();
+
  QList<QGraphicsItem*> colliding_items = collidingItems();
+
+
 
  for (int i=0 , n = colliding_items.size(); i < n ; ++i ){
 
                   if (typeid (*(colliding_items[i])) == typeid (Blocks)) {
                      //remove then both
-                     scene()->removeItem(colliding_items[i]);
-                     Score * score = new Score();
-                     score->setPos(200,200);
-                     scene()->addItem(score);
-                      score->increase();
-                     //Score()->score->increase();
+                    scene()->removeItem(colliding_items[i]);
+                    game->score->increase();
                      movimiento_techo();
 
                      //scene()->removeItem(this);
@@ -60,7 +61,7 @@ void Bullet::move() {
   // movimiento_pared_izquierda();
   //  movimiento_techo();
    // movimiento_pared_derecha();
-    movimiento_paleta();
+
 
 }
 
