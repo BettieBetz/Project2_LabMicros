@@ -14,6 +14,7 @@
 #include "game.h"
 
 extern Game * game ;
+
 Bullet::Bullet() {
      //Drew the rect
     setRect(0,0,5,5);
@@ -50,7 +51,8 @@ void Bullet::move() {
                      movimiento_pared_izquierda();
                  return;
                  }
-                 if (typeid (*(colliding_items[i])) == typeid (Wall_botton)){
+                 if (typeid (*(colliding_items[i])) == typeid (Wall_top)){
+                     game->lives->decrease();
                      scene()->removeItem(this);
                      delete this;
                  return;

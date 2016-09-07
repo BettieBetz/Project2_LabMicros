@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     ball.cpp \
     bullet.cpp \
     score.cpp \
-    game.cpp
+    game.cpp \
+    lives.cpp
 
 HEADERS  += mainwindow.h \
     wall_left.h \
@@ -35,7 +36,8 @@ HEADERS  += mainwindow.h \
     ball.h \
     bullet.h \
     score.h \
-    game.h
+    game.h \
+    lives.h
 
 FORMS    += mainwindow.ui
 

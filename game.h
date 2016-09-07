@@ -10,12 +10,14 @@
 #include "palette.h"
 #include "ball.h"
 #include "score.h"
+#include "lives.h"
 #include <QApplication>
 #include <QGraphicsScene>
 #include <QGraphicsRectItem>
 #include <QGraphicsView>
 #include <QTimer>
 #include <QWidget>
+
 
 class Game: public QGraphicsRectItem {
 
@@ -24,6 +26,7 @@ public:
     QGraphicsScene * scene;
     QGraphicsView * view;
     Score * score;
+    Lives * lives;
     Palette * plt;
     Ball * bl;
     Wall_left * wlf;
