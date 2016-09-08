@@ -7,6 +7,14 @@ class Ball: public QObject ,public QGraphicsRectItem {
     Q_OBJECT
 
 public:
-    void bola ();
+    Ball();
+
+public slots:
+    void move ();    
+    void rebote_pared_izquierda();
+    void rebote_pared_derecha();
+    void rebote_techo();
+    void rebote_paleta();
+    void generar_angulo();
 };
 #endif // BALL_H

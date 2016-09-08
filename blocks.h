@@ -2,6 +2,8 @@
 #define BLOCKS_H
 #include <QGraphicsRectItem>
 #include <QObject>
+
+
 class Blocks: public QObject ,public QGraphicsRectItem {
     Q_OBJECT
 

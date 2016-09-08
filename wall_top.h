@@ -2,6 +2,8 @@
 #define WALL_TOP_H
 #include <QGraphicsRectItem>
 #include <QObject>
+
+
 class Wall_top: public QObject ,public QGraphicsRectItem {
     Q_OBJECT
 

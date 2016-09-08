@@ -2,6 +2,8 @@
 #define WALL_RIGHT_H
 #include <QGraphicsRectItem>
 #include <QObject>
+
+
 class Wall_right: public QObject ,public QGraphicsRectItem {
     Q_OBJECT
 

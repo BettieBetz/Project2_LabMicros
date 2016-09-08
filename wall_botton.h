@@ -2,6 +2,8 @@
 #define WALL_BOTTON_H
 #include <QGraphicsRectItem>
 #include <QObject>
+
+
 class Wall_botton: public QObject ,public QGraphicsRectItem {
     Q_OBJECT
 

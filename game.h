@@ -17,7 +17,7 @@
 #include <QGraphicsView>
 #include <QTimer>
 #include <QWidget>
-
+#include <QGraphicsPixmapItem>
 
 class Game: public QGraphicsRectItem {
 
@@ -36,4 +36,3 @@ public:
 };
 
 #endif // GAME_H
-
