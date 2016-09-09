@@ -12,7 +12,11 @@ Lives::Lives(QGraphicsTextItem *parent) : QGraphicsTextItem(parent) {
 }
 
 void Lives::decrease() {
+
+    if (lives>0){
     lives--;
+    }
+
     setPlainText(QString("Vidas: ") + QString::number(lives));
 }
 

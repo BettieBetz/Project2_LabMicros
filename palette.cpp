@@ -35,4 +35,5 @@ void Palette::keyPressEvent(QKeyEvent *event)
             //bullet->setPos(x()+60,y()+525);
             //scene()->addItem(bullet);//se agrega la pelota a la scena
         }
+
 }//end void

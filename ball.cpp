@@ -46,48 +46,48 @@ void Ball::generar_angulo() {
 
     if((0<=angulo_salida)&&(angulo_salida<30)){
         dir_movX = -1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 2;
+        movY = 4;
     }
 
     else if((30<=angulo_salida)&&(angulo_salida<60)){
         dir_movX = -1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 3;
+        movY = 6;
     }
 
     else if((60<=angulo_salida)&&(angulo_salida<90)){
         dir_movX = -1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 4;
+        movY = 8;
     }
 
     else if(angulo_salida == 90){
         dir_movX = 0;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 5;
+        movY = 10;
     }
     else if((90<=angulo_salida)&&(angulo_salida<120)){
         dir_movX = 1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 4;
+        movY = 8;
     }
     else if((120<=angulo_salida)&&(angulo_salida<150)){
         dir_movX = 1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 3;
+        movY = 6;
     }
     else if((150<=angulo_salida)&&(angulo_salida<=180)){
         dir_movX = 1;
-        movX = 5;
+        movX = 10;
         dir_movY = -1;
-        movY = 2;
+        movY = 4;
     }
 
 
@@ -95,9 +95,7 @@ void Ball::generar_angulo() {
 
 }
 
-void Ball::move() {
-
-     //rebote_paleta();
+void Ball::move() { 
 
      //Move the bullet up
      setPos(x()+(movX*dir_movX),y()+(movY*dir_movY));
